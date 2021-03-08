@@ -9,7 +9,6 @@ export class HousingLoan extends LoanBase {
     }
 
     getMonthRate(): number {
-        debugger;
         return this.getTotalToPay() / this.getNumberOfRates();
     }
 
