@@ -1,6 +1,7 @@
 export abstract class LoanBase {
     amount: number;
     years: number;
+    interestRate: number;
 
-    abstract calculateMonthRate(): number;
+    abstract getMonthRate(): number;
 }
