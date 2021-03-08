@@ -9,7 +9,8 @@ export class HousingLoan extends LoanBase {
     }
 
     getMonthRate(): number {
-        return this.getTotalToPay() / this.getNumberOfRates();
+        const rate = this.getTotalToPay() / this.getNumberOfRates();
+        return Math.round(rate * 100) / 100;
     }
 
     private getTotalToPay(): number {
