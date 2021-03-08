@@ -7,9 +7,10 @@ import { HousingLoan } from './loans/housing-loan';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  monthRate = 0;
 
   calculateRate(amount: string, years: string): void {
     const housingLoan = new HousingLoan(Number(amount), Number(years));
-    housingLoan.getMonthRate();
+    this.monthRate = housingLoan.getMonthRate();
   }
 }

@@ -7,4 +7,8 @@
     <label>Years:</label>
     <input #yearsBox type="text" />
 </div>
+<div>
+    <label>Month rate is:</label>
+    <label>{{monthRate}}</label>
+</div>
 <button (click)="calculateRate(amountBox.value, yearsBox.value)">Calculate rate</button>
