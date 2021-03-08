@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HousingLoan } from './loans/housing-loan';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  calculateRate(amount: number, years: number): void {
-    console.log(amount);
-    console.log(years);
+  calculateRate(amount: string, years: string): void {
+    const housingLoan = new HousingLoan(Number(amount), Number(years));
+    housingLoan.getMonthRate();
   }
 }
