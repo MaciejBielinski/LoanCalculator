@@ -1,10 +1,10 @@
 <h1>Loan calculator</h1>
 <div>
     <label>Amount:</label>
-    <input type="text" />
+    <input #amountBox type="text" />
 </div>
 <div>
     <label>Years:</label>
-    <input type="text" />
+    <input #yearsBox type="text" />
 </div>
-<button>Calculate rate</button>
+<button (click)="calculateRate(amountBox.value, yearsBox.value)">Calculate rate</button>
